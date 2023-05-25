@@ -1,0 +1,71 @@
+
+
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <div class="logo">
+                            <img src="..\..\assets\logo2.jpg">
+                        </div>
+                        <h5 class="pt-3">Sign in to your account</h5>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="myForm" (ngSubmit) = "onSubmit(myForm)">
+                            <div class="form pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="email" form type="text" placeholder="email" />
+                                </div>
+                            </div>
+                        <!--     <small
+                                *ngIf="!loginForm.controls.Username?.valid && (loginForm.controls.Username?.dirty || loginForm.controls.Username?.touched)">
+                        <div [hidden]="loginForm.controls.Username.errors?.minlength">Min length is 3</div> 
+                                <div [hidden]="!loginForm.controls.Username.errors?.required">*Username is required
+                                </div>
+                            </small>  -->
+
+
+                            <div class="form pt-3">
+                                <div class="input-field">
+
+
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="password" [type]="type" placeholder="Password" />
+                                    <span (click)="hideShowPass()" class="fa {{ eyeIcon }}"></span>
+                                </div>
+                            </div>
+                          <!--   <small
+                                *ngIf="!loginForm.controls.Password?.valid && (loginForm.controls.Password?.dirty || loginForm.controls.Password?.touched)">
+                                <div [hidden]="loginForm.controls.Password.errors?.minlength">Min length is 8</div> 
+                                <div [hidden]="!loginForm.controls.Password.errors?.required">*Password is required
+                                </div>
+                            </small> -->
+
+
+                            <!-- <div class="form-inline fr mt-4">
+                      <a id="forgot" class="font-weight-bold">Forgot Password?</a>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary btn-block mt-4 w-100">
+                        Login
+                    
+                    </button>
+
+                            
+
+                            <!-- <div class="text-center pt-4 text-muted">
+                    Don't have account?
+                    <a id="forgot" routerLink="/home">Sign Up</a>
+                    </div> -->
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

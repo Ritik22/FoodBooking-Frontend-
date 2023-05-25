@@ -1,0 +1,16 @@
+
+<app-cleander> </app-cleander>
+
+ <div class="image ">
+<img src="..\..\assets\food.jpg">
+</div>
+ 
+<div class="Booking">
+    <button id="book"  mat-raised-button  color="primary" (click)= "goToBooking()">Booking</button>
+    
+
+    <div class="onclickevent" *ngIf="addBooking">
+        <app-booking></app-booking>
+    </div>
+<button mat-raised-button color="warn">Cancel Booking</button>
+</div>
